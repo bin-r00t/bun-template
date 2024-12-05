@@ -5,27 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test fetch Stream</title>
     <style>
-      iframe {
-        appearance: unset;
-        border: none;
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
       }
     </style>
   </head>
   <body>
     <div id="app">
-      fetch的流式接受，
-      服务端返回的数据是一个流，
-      前端通过fetch的response.body获取到这个流，
-      然后通过ReadableStream对象的pipeTo方法将这个流传递给一个WritableStream对象，
-      这个WritableStream对象是一个TransformStream对象，
-      通过这个对象的transform方法对流进行处理，
-      最后将处理后的流传递给一个WritableStream对象，
-      这个WritableStream对象是一个WritableStreamDefaultWriter对象，
-      通过这个对象的write方法将流写入到一个ReadableStream对象，
-      这个ReadableStream对象是一个ReadableStreamDefaultReader对象，
-      通过这个对象的read方法读取流的数据，
-      最后将数据展示到页面上。
+      <input name="message" type="text" />
+      <button id="send">send</button>
     </div>
-    <script src="main.js"></script>
+    <section>
+      <span>from server:</span>
+      <ul style="border: 1px solid #ccc; padding: 12px">
+        <li>demo message...</li>
+      </ul>
+    </section>
+    <!-- <script src="main.js"></script> -->
+
+    <script>
+      const btn = document.getElementById("send");
+      const input = document.querySelector("input[name=message]");
+      const ul = document.querySelector("ul");
+      btn.addEventListener("click", async () => {
+        const message = input.value;
+        const response = await fetch("http://localhost:3000", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ message }),
+        });
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) {
+            break;
+          }
+          const li = document.createElement("li");
+          li.textContent = decoder.decode(value);
+          ul.appendChild(li);
+        }
+      });
+    </script>
   </body>
 </html>
