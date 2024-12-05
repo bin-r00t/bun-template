@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test fetch Stream</title>
+    <style>
+      iframe {
+        appearance: unset;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      fetch的流式接受，
+      服务端返回的数据是一个流，
+      前端通过fetch的response.body获取到这个流，
+      然后通过ReadableStream对象的pipeTo方法将这个流传递给一个WritableStream对象，
+      这个WritableStream对象是一个TransformStream对象，
+      通过这个对象的transform方法对流进行处理，
+      最后将处理后的流传递给一个WritableStream对象，
+      这个WritableStream对象是一个WritableStreamDefaultWriter对象，
+      通过这个对象的write方法将流写入到一个ReadableStream对象，
+      这个ReadableStream对象是一个ReadableStreamDefaultReader对象，
+      通过这个对象的read方法读取流的数据，
+      最后将数据展示到页面上。
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
