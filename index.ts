@@ -19,6 +19,88 @@ const server = Bun.serve({
     }
 
     // push text
+    const bunchofText = `
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    Bun executes the script command in a subshell. It checks for the following shells in order, using the first one it finds: bash, sh, zsh.
+    `
+    if (req.url === "http://localhost:3000/text") {
+      return new Response(bunchofText, {
+        headers: {
+          "content-type": "text/plain",
+          "Access-Control-Allow-Origin": "*",
+        },
+      });
+    }
+
+    // original demo push
     const body = figlet.textSync("Bun!");
 
     // return response with no-cors setting:

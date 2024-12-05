@@ -1,28 +1,52 @@
 const url = "http://localhost:3000";
 const imageurl = "http://localhost:3000/image";
+const texturl = "http://localhost:3000/text";
 
 console.log("start fetching....");
-// 2. fetch image
-fetch(imageurl).then((response) => {
+// 3. fetch text
+fetch(texturl).then((response) => {
   let readBytes = 0;
+  const section = document.createElement("section");
+  const decoder = new TextDecoder();
+  document.body.appendChild(section);
   const reader = response.body.getReader();
-  let img = document.createElement("img");
-  document.body.appendChild(img);
-  let data = [];
   return reader.read().then(function processBody({ done, value }) {
     if (done) {
       console.log("Stream complete");
-      const blob = new Blob(data, { type: "image/png" });
-      const url = URL.createObjectURL(blob);
-      img.src = url;
+      document.body.innerText = text;
       return;
     }
-    data.push(value);
+    const span = document.createElement("span");
+    span.innerText = decoder.decode(value, { stream: true });
+    section.appendChild(span);
+
     readBytes += value.length;
-    console.log(`Received ${readBytes} bytes of data so far, done: ${done}`);
+    console.log(`Received ${readBytes} bytes of data so far`);
     return reader.read().then(processBody);
   });
 });
+
+// 2. fetch image
+// fetch(imageurl).then((response) => {
+//   let readBytes = 0;
+//   const reader = response.body.getReader();
+//   let img = document.createElement("img");
+//   document.body.appendChild(img);
+//   let data = [];
+//   return reader.read().then(function processBody({ done, value }) {
+//     if (done) {
+//       console.log("Stream complete");
+//       const blob = new Blob(data, { type: "image/png" });
+//       const url = URL.createObjectURL(blob);
+//       img.src = url;
+//       return;
+//     }
+//     data.push(value);
+//     readBytes += value.length;
+//     console.log(`Received ${readBytes} bytes of data so far, done: ${done}`);
+//     return reader.read().then(processBody);
+//   });
+// });
 
 // 1.fetch plain text
 // fetch(url).then((response) => {
